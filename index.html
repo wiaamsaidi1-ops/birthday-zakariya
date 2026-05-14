@@ -2,14 +2,17 @@
 <html>
 <head>
 <title>Happy Birthday Zakariya 🎉</title>
+
 <style>
 body{
   text-align:center;
   background:linear-gradient(#ff9a9e,#fad0c4);
   font-family:Arial;
   color:white;
-  margin-top:80px;
 }
+
+h1{margin-top:50px;}
+
 button{
   padding:15px 30px;
   font-size:20px;
@@ -19,25 +22,46 @@ button{
   color:white;
   cursor:pointer;
 }
-#msg{display:none;font-size:30px;margin-top:30px;}
+
+#msg{display:none;font-size:30px;margin-top:20px;}
+#game{display:none;margin-top:30px;}
+img{width:250px;border-radius:20px;margin-top:20px;}
 </style>
 </head>
 
 <body>
 
-<h1>🎂Assgass ambarki gmano Zakariya ifolkin  🎂</h1>
+<h1>🎂 Assgass Ambarky Gmano Zakariya Ifolkin 🎂</h1>
 <p>Click the surprise button 👇</p>
 
-<button onclick="show()">🎁 Open Surprise</button>
+<button onclick="start()">🎁 Open Surprise</button>
 
 <div id="msg">
-🥳 SURPRISE !! 🥳 <br><br>
-arak tmna7 najaa7 7l7ayat nk drz9 ifolkin dtol l3meer inchallah akolo t79ii9t aylii trjiit 7todrt nk  ❤️
+🥳 SURPRISE !! 🥳 <br>
+Arak tmna7 najah hlhaya nk dtolt l3meer drz9 ifolkin draht lbal dkolo mayfolkin zend kiyin i7tina rbi  ❤️
 </div>
 
+<div id="photos">
+<img src="https://i.imgur.com/6qKQF6F.png">
+<img src="https://i.imgur.com/xs4F4sC.png">
+</div>
+
+<div id="game">
+<h2>🎮 Birthday Game 🎮</h2>
+<p>Click the cake as many times as you can 🎂</p>
+<button onclick="score++ ; document.getElementById('score').innerHTML=score">🎂</button>
+<h2 id="score">0</h2>
+</div>
+
+<audio id="music" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+
 <script>
-function show(){
+let score = 0;
+
+function start(){
  document.getElementById("msg").style.display="block";
+ document.getElementById("game").style.display="block";
+ document.getElementById("music").play();
 }
 </script>
 
